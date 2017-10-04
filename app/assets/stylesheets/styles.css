@@ -93,6 +93,33 @@ body {
 	color: #fe423f;
 }
 
+/*MOVIE PAGE*/
+
+.movie-detail {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.movie-description {
+	padding-top: 10px;
+}
+
+.movie-detail .movie-stars .ratings	 {
+	padding-left: 0px;
+}
+
+.movie-detail .movie-stars .ratings li {
+	display: inline-block!important;
+    list-style: none;
+    margin: 0!important;
+}
+
+.movie-detail .movie-stars .ratings li i {
+	color: #fe423f;
+	font-size: 12px;
+	float: left;
+}
+
 @media (max-width: 767px) {
 	.navbar-brand {
 		padding-left: 10px;

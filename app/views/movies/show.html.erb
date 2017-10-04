@@ -1,4 +1,28 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+<div class="container movie-detail">
+	<div class="row">
+		<div class="col-lg-6 col-md-6">
+			<iframe width="100%" height="315" src="https://www.youtube.com/embed/<%=@movie.trailer%>" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="col-lg-6 col-md-6">
+			<h2><%= @movie.name %></h2>
+			<div class="movie-subinfo">
+				<span> <%= @movie.year %> | </span> 
+				<span><%= @movie.duration.to_i %> min. </span>
+				<span>
+					<div class="movie-stars">
+						<ul class="ratings">
+							<% for i in 1..5 %>
+								<li>
+									<i class="fa <%= i <= @movie.rating ? 'fa-star' : 'fa-star-o' %>" aria-hidden="true"></i>
+								</li>
+							<% end %>
+						</ul>
+					</div>
+				</span>
+			</div>
+			<div class="movie-description">
+				<%= @movie.description %>
+			</div>
+		</div>
+	</div>
+</div>
