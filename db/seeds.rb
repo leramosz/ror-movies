@@ -6,7 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Movie.destroy_all
+Category.destroy_all
 
+Category.create(name: 'Comedy')
+Category.create(name: 'Horror')
+Category.create(name: 'War')
+Category.create(name: 'Adventure')
 
 Movie.create! [
 	{ 
@@ -16,7 +21,8 @@ Movie.create! [
 		duration: 120, 
 		rating: 3, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/c1.jpg', 
-		trailer: 'iUfsjUgod3I' 
+		trailer: 'iUfsjUgod3I',
+		categories: Category.where(name: 'Comedy')
 	
 	},
 	{ 
@@ -26,8 +32,8 @@ Movie.create! [
 		duration: 140, 
 		rating: 4, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/c2.jpg', 
-		trailer: 'jWM0ct-OLsM' 
-	
+		trailer: 'jWM0ct-OLsM',
+		categories: Category.where(name: 'Comedy')
 	},
 	{ 
 		name: 'Dirty Grandpa', 
@@ -36,7 +42,8 @@ Movie.create! [
 		duration: 110, 
 		rating: 2, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/c3.jpg', 
-		trailer: 'aZSzMIFZT7Q' 
+		trailer: 'aZSzMIFZT7Q',
+		categories: Category.where(name: 'Comedy')
 	
 	},
 	{ 
@@ -46,7 +53,8 @@ Movie.create! [
 		duration: 180, 
 		rating: 4, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/c4.jpg', 
-		trailer: 'h1pA4Oio6T8' 
+		trailer: 'h1pA4Oio6T8',
+		categories: Category.where(name: 'Comedy')
 	
 	},
 	{ 
@@ -56,7 +64,8 @@ Movie.create! [
 		duration: 115, 
 		rating: 4, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/c5.jpg', 
-		trailer: '3JNLwlcPBPI' 
+		trailer: '3JNLwlcPBPI',
+		categories: Category.where(name: 'Comedy')
 	
 	},
 	{ 
@@ -66,7 +75,8 @@ Movie.create! [
 		duration: 160, 
 		rating: 5, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/hr1.jpg', 
-		trailer: 'VFsmuRPClr4' 
+		trailer: 'VFsmuRPClr4',
+		categories: Category.where(name: 'Horror')
 	
 	},
 	{ 
@@ -76,7 +86,8 @@ Movie.create! [
 		duration: 150, 
 		rating: 1, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/hr2.jpg', 
-		trailer: '6hW8hUcXR-A' 
+		trailer: '6hW8hUcXR-A',
+		categories: Category.where(name: 'Horror') 
 	
 	},
 	{ 
@@ -86,7 +97,8 @@ Movie.create! [
 		duration: 120, 
 		rating: 5, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/hr3.jpg', 
-		trailer: 'K0LLaybEuzA' 
+		trailer: 'K0LLaybEuzA',
+		categories: Category.where(name: 'Horror')
 	
 	},
 	{ 
@@ -96,7 +108,8 @@ Movie.create! [
 		duration: 110, 
 		rating: 2, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/m14.jpg', 
-		trailer: '2CRjdwRYQbU' 
+		trailer: '2CRjdwRYQbU',
+		categories: Category.where(name: 'War')
 	
 	},
 	{ 
@@ -106,7 +119,8 @@ Movie.create! [
 		duration: 200, 
 		rating: 2, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/m16.jpg', 
-		trailer: 'nbNcULQFojc' 
+		trailer: 'nbNcULQFojc',
+		categories: Category.where(name: 'Adventure')
 	
 	},
 	{ 
@@ -116,8 +130,8 @@ Movie.create! [
 		duration: 180, 
 		rating: 3, 
 		cover: 'https://p.w3layouts.com/demos_new/09-01-2017/movies_pro-demo_Free/85730052/web/images/m9.jpg', 
-		trailer: 'RH2BD49sEZI' 
-	
+		trailer: 'RH2BD49sEZI',
+		categories: Category.where(name: 'Adventure') 
 	}		
 ];
 

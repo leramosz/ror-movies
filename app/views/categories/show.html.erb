@@ -1,0 +1,33 @@
+<h1 class="text-center page-title"><%= @category.name %></h1>
+<div class="home container">
+	<div class="row">
+		<% @movies.each do |movie| %>
+			<div class="col-lg-3 col-md-4 col-xs-6 col-xxs-12">
+				<div class="movie-item">
+					<div class="movie-img">
+						<a href="<%= movie_path movie.id %>">
+							<img src="<%= movie.cover %>">
+						</a>
+					</div>
+					<div class="movie-info">
+						<div class="movie-title">
+							<h6><%= movie.name %></h6>
+						</div>
+						<div class="movie-year">
+							<p><%= movie.year %></p>	
+							<div class="movie-stars">
+								<ul class="ratings">
+									<% for i in 1..5 %>
+										<li>
+											<i class="fa <%= i <= movie.rating ? 'fa-star' : 'fa-star-o' %>" aria-hidden="true"></i>
+										</li>
+									<% end %>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

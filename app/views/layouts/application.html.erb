@@ -40,18 +40,11 @@
             <li class="visible-xs">
               <a href="<%=root_path%>">Home</a>
             </li>
-            <li>
-              <a href="#"><br class="hidden-xs"> Comedy</a>
-            </li>
-            <li>
-              <a href="#"><br class="hidden-xs"> Horror</a>
-            </li>
-            <li>
-              <a href="#"><br class="hidden-xs"> War</a>
-            </li>
-            <li>
-              <a href="#"><br class="hidden-xs"> Adventure</a>
-            </li>
+            <% @categories.each do |category| %>
+              <li>
+                <a href="<%= category_path category.id %>"><br class="hidden-xs"><%= category.name %></a>
+              </li>
+            <% end %>
           </ul><!-- #nav-list -->
         </div><!-- .collapse .navbar-collapse -->
       </div><!-- .container -->
