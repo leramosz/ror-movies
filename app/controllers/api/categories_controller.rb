@@ -1,5 +1,10 @@
 module Api 
   class CategoriesController < APIController
+
+  	def index
+  	  @categories = Category.all
+  	  render :template => 'api/categories/index.json.jbuilder', status: :ok
+    end
   
     def show
       @category = Category.find(params[:id])
