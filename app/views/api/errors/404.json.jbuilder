@@ -1,2 +1,2 @@
-json.error "404"
-json.msg "not found"
+json.status "404"
+json.error "Not Found"
