@@ -3,7 +3,7 @@
 
   	def index
   	  @movies = Movie.all
-  	  render :template => 'api/movies/index.json.jbuilder', status: :ok
+  	  render :template => 'api/movies/index.json.jbuilder', status: :ok, content_type: request.accept
     end
   
     def show
