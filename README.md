@@ -12,7 +12,7 @@ Also, this APP provides an API RESTful sharing JSON data. The endpoints are the 
 - List of movies => /api/movies
 - Detail of a movie => /api/movies/{id}
 - List of categories => /api/categories
-- List if movies by category => /api/categories/{id}
+- List of movies by category => /api/categories/{id}
 
 In order to make it run, the following steps should be enough:
 
