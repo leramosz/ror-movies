@@ -7,7 +7,7 @@ Simple Web APP built in RoR connecting to a DB (SQLite for DEV and PG for PROD).
 - List of categories
 - List of movies by category
 
-Also, this example provides an API RESTful sharing JSON data. The endpoints are the following:
+Also, this APP provides an API RESTful sharing JSON data. The endpoints are the following:
 
 - List of movies => /api/movies
 - Detail of a movie => /api/movies/{id}
