@@ -19,4 +19,4 @@ In order to make it run, the following steps should be enough:
 - rake db:migrate
 - rake db:seed
 
-A live version can be found @ http://ror-movies.herokuapp.com
+A live runnig version can be found @ http://ror-movies.herokuapp.com
