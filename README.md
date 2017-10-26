@@ -1,6 +1,6 @@
 # README
 
-Simple Web APP connecting to a DB (SQLite for DEV and PG for PROD) that lists the following:
+Simple Web APP built in RoR connecting to a DB (SQLite for DEV and PG for PROD). This APP lists the following:
 
 - List of movies
 - Detail of a movie
